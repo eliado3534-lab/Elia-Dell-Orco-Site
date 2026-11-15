@@ -1,4 +1,4 @@
-import { Instagram, Mail } from 'lucide-react';
+import { ArrowUpRight, Instagram, Mail } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { profile } from '@/data/profile';
@@ -29,11 +29,12 @@ export default function SiteFooter() {
                   <span>{label}</span>
                   <Icon className="h-4 w-4 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" strokeWidth={1.5} />
                 </div>
-                <p className="flex items-baseline gap-2 font-display font-bold text-ink transition-colors duration-500 group-hover:text-paper">
+                <p className="flex items-center gap-2 font-display font-bold text-ink transition-colors duration-500 group-hover:text-paper">
                   <span className="break-all text-[length:clamp(0.95rem,5.4cqw,1.75rem)]">{value}</span>
-                  <span className="shrink-0 text-[length:clamp(0.95rem,5.4cqw,1.75rem)] transition-transform duration-500 group-hover:translate-x-1">
-                    ↗
-                  </span>
+                  <ArrowUpRight
+                    className="h-[1em] w-[1em] shrink-0 text-[length:clamp(0.95rem,5.4cqw,1.75rem)] transition-transform duration-500 group-hover:translate-x-1"
+                    strokeWidth={1.5}
+                  />
                 </p>
               </a>
             </Reveal>
